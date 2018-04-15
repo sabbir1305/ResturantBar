@@ -1,0 +1,19 @@
+﻿@model IEnumerable<ResturantBar.Areas.Admin.Models.FoodItem>
+
+            <div class="row">
+@foreach (var item in Model)
+{
+
+                <div class="col-md-4 col-sm-6 wow fadeInLeft" data-wow-duration="3s" data-wow-delay="2s">
+                    <h3 class="text-center text-danger" >@item.FoodName - (@item.Price)Tk.</h3>
+                    <img src="~/Content/images/Products/@item.Image" alt="signature1" class="img-responsive" style="display:inline">
+                   
+                    <a href="#" data-featherlight="../Content/images/Products/@item.Image">
+                        <h2>@item.FoodTypeName</h2> 
+                    </a>
+                    
+                </div>
+
+}
+
+            </div>
